@@ -18,7 +18,6 @@ public class EntityController<T> implements CRUDable<T>{
 
 	@Override
 	public ArrayList<T> retrieve() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
