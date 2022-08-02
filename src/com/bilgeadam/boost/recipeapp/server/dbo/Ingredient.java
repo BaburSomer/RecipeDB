@@ -15,10 +15,12 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "ingredients")
 @NoArgsConstructor
+@ToString (doNotUseGetters = true)
 public class Ingredient {
 	@Getter
 	@Id
@@ -45,4 +47,7 @@ public class Ingredient {
 		return this.allergens;
 	}
 	
+	public void setAllergens(Collection<Allergen> allergens) {
+		this.allergens = allergens;
+	}
 }
