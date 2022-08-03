@@ -14,11 +14,10 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Table(name = "roles")
-@ToString
+
 @NoArgsConstructor
 public class Role {
 	@Getter
@@ -29,7 +28,7 @@ public class Role {
 	@Setter
 	private String name;
 	@ManyToMany()
-	@JoinTable(name="users_roles", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
+	@JoinTable(name="users_roles", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "user_id")})
 	private Collection<User> users = new HashSet<>();
 	
 	public Role(String name) {

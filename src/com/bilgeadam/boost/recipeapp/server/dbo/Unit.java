@@ -27,5 +27,4 @@ public class Unit {
 		super();
 		this.name = name;
 	}
-
 }

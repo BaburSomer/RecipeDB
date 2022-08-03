@@ -3,6 +3,7 @@ package com.bilgeadam.boost.recipeapp.server.dbo;
 import java.util.Collection;
 import java.util.HashSet;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,13 +26,22 @@ public class User {
 	private long   oid;
 	@Getter
 	@Setter
+	@Column(name="first_name")
 	private String firstName;
+	@Getter
+	@Setter	
 	private String surname;
+	@Getter
+	@Setter	
 	private String email;
+	@Getter
+	@Setter
 	private String password;
+	@Getter
+	@Setter
 	private double rating;
 
-	@ManyToMany(mappedBy = "roles")
+	@ManyToMany(mappedBy = "users")
 	@Getter @Setter
 	private Collection<Role> roles = new HashSet<>();
 
