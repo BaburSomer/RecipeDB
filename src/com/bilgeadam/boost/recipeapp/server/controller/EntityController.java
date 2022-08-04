@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 import org.hibernate.Session;
 
+import com.bilgeadam.boost.recipeapp.server.dbo.Recipe;
 import com.bilgeadam.boost.recipeapp.utils.HibernateUtil;
+
+import jakarta.persistence.TypedQuery;
 
 public class EntityController<T> implements CRUDable<T>{
 
@@ -18,6 +21,12 @@ public class EntityController<T> implements CRUDable<T>{
 
 	@Override
 	public ArrayList<T> retrieve() {
+//		Session          session    = databaseConnectionViaHibernate();
+//		String           hql        = "SELECT recipe FROM Recipe as recipe";
+//		TypedQuery<T> typedQuery = session.createQuery(hql, T);
+//
+//		ArrayList<T> entities = (ArrayList<T>) typedQuery.getResultList();
+//		return entities;
 		return null;
 	}
 

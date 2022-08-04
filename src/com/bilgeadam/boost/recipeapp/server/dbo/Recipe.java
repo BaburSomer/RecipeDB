@@ -1,6 +1,7 @@
 package com.bilgeadam.boost.recipeapp.server.dbo;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -34,6 +35,7 @@ public class Recipe {
 	private int servings;
 	@Getter
 	@Setter
+	@Column(name = "calories_per_serving")
 	private int caloriesPerServing;
 	@Getter
 	@Setter
